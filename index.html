@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet" />
+    <title>DogShelter Entry</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      html {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: aliceblue;
+      }
+      #header,
+      #container {
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+      }
+      #header {
+        height: 10vh;
+        width: 90vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      #icon {
+        height: 9vh;
+        width: 9vh;
+        margin-right: 1vw;
+      }
+      #headericon {
+        display: flex;
+        align-items: center;
+        font-family: "Ubuntu", sans-serif;
+      }
+      .contact {
+        background-color: black;
+        height: 7vh;
+        width: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        cursor: pointer;
+      }
+      #headercontact {
+        margin-left: auto;
+      }
+      #container {
+        width: 60vw;
+        box-shadow: 2px 2px 10px #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div id="headericon">
+        <img id="icon" src="icons/dog-in-front-of-a-man.png" alt="DogIcon" />
+        <p style="font-size: 40px">bao bao</p>
+      </div>
+      <div id="headercontact">
+        <div class="contact" onclick="window.open('https:/m.facebook.com/100061029024088/' ,'_newtab' )">Developer</a></div>
+      </div>
+    </div>
+
+    <div id="container">
+      Entry list
+      <div id="list-container"></div>
+    </div>
+  </body>
+</html>
