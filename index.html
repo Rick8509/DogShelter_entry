@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="icons/happy.png">
+    <link rel="icon" type="image/x-icon" href="icons/happy.png" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet" />
     <title>Pets Care</title>
     <style>
@@ -13,25 +13,22 @@
         padding: 0px;
       }
       html {
-        height: 100%;
+        /* height: 100%; */
         width: 100%;
       }
       body {
-        height: 100%;
+        /* height: 100%; */
         width: 100%;
+        padding-bottom: 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: aliceblue;
       }
-      #header,
-      #container {
-        margin-top: 5vh;
-        margin-bottom: 2vh;
-      }
       #header {
         height: 10vh;
         width: 90vw;
+        margin-top: 3vh;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -41,46 +38,191 @@
         width: 9vh;
         margin-right: 1vw;
       }
-      #headericon {
+      #icontext {
+        font-size: 40px;
+        background: linear-gradient(
+          to right,
+          #ef5350,
+          #f48fb1,
+          #7e57c2,
+          #2196f3,
+          #26c6da,
+          #43a047,
+          #eeff41,
+          #f9a825,
+          #ff5722
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      #headerleft {
         display: flex;
         align-items: center;
         font-family: "Ubuntu", sans-serif;
       }
       .contact {
-        background-color: black;
         height: 7vh;
-        width: 10vw;
+        width: 13vw;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         color: aliceblue;
+        background-color: black;
         font-size: 20px;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         cursor: pointer;
       }
-      #headercontact {
+      #headerright {
         margin-left: auto;
       }
-      #container {
-        width: 60vw;
+      #calender {
+        font-size: 35px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        margin-left: auto;
+        margin-right: 5.5vw;
+      }
+      #main-container {
+        height: 100vh;
+        width: 70vw;
+        margin-top: 3vh;
         box-shadow: 2px 2px 10px #999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+      }
+      #listtop {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3vh;
+        margin-bottom: 2.8vh;
+      }
+      #listtoptext {
+        margin-right: 30vw;
+        font-size: 30px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: #36cd73;
+      }
+      #createnode {
+        display: flex;
+        align-items: center;
+        padding: 5px 15px 5px 15px;
+        font-size: 23px;
+        border: none;
+        border-radius: 3px;
+        color: aliceblue;
+        background-color: #36cd73;
+        cursor: pointer;
+      }
+      #createnode:hover {
+        background-color: #3d9761;
+      }
+      #addicon {
+        height: 4vh;
+        width: 2.2vw;
+        margin-left: 4px;
+      }
+      #line {
+        height: 2px;
+        width: 87%;
+        background-color: rgb(180, 178, 178);
+        box-shadow: 1px 1px 15px rgb(104, 103, 103);
+        border-radius: 50%;
+        margin-bottom: 5vh;
+      }
+      #listcontainer {
+        height: 100%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      .entries {
+        width: 90%;
+        height: 12vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #submit {
+        padding: 10px 30px 10px 30px;
+        border: none;
+        border-radius: 3px;
+        background-color: #36cd73;
+        color: aliceblue;
+        font-size: 20px;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+      #submit:hover {
+        background-color: #3d9761;
+      }
+
+      @media screen and (max-width: 500px) {
+        #header {
+          height: 8vh;
+          width: 100vw;
+          margin-top: 2.5vh;
+        }
+        #icon {
+          height: 4vh;
+          width: 4vh;
+          margin-left: 5vw;
+        }
+        #icontext {
+          font-size: 28px;
+        }
+        #calender {
+          font-size: 28px;
+        }
+        .contact {
+          visibility: hidden;
+          /* height: 6vh;
+          width: 32vw;
+          margin-right: 2vw;
+          text-align: center;
+          background-color: #7f48de;
+          border-radius: 5px;
+          border: 1px solid #16cbdc; */
+        }
+        #main-container {
+          width: 85vw;
+        }
+        #addicon {
+          height: 3vh;
+          width: 6vw;
+          margin-left: 2px;
+        }
       }
     </style>
   </head>
   <body>
     <div id="header">
-      <div id="headericon">
-        <img id="icon" src="icons/dog-in-front-of-a-man.png" alt="DogIcon" />
-        <p style="font-size: 40px">Pets Care</p>
+      <div id="headerleft">
+        <img id="icon" src="icons/happy.png" alt="DogIcon" />
+        <p id="icontext">Pets Care</p>
       </div>
-      <div id="headercontact">
-        <div class="contact" onclick="window.open('https:/m.facebook.com/100061029024088/' ,'_newtab' )">Developer</a></div>
+      <div id="headerright">
+        <div class="contact" onclick="window.open('https:/m.facebook.com/100061029024088/' ,'_newtab' )">
+          Developer contact
+        </div>
       </div>
     </div>
 
-    <div id="container">
-      <button  id="createnode">New</button>
-      <div id="list-container"></div>
+    <div id="calender"></div>
+
+    <div id="main-container">
+      <div id="listtop">
+        <p id="listtoptext">Current pets list</p>
+        <button type="button" id="createnode">New<img id="addicon" src="icons/add.png" alt="icon" /></button>
+      </div>
+      <div id="line"></div>
+      <div id="listcontainer"></div>
+      <button type="submit" id="submit">Save</button>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
