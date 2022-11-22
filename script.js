@@ -21,6 +21,7 @@ document.getElementById("createnode").onclick = () => {
 
   var p1 = document.createElement("p");
   p1.innerHTML = "Name :";
+  p1.classList.add("divp");
   var inputtext1 = document.createElement("input");
   inputtext1.setAttribute("type", "text");
   inputtext1.classList.add("fields");
@@ -29,6 +30,7 @@ document.getElementById("createnode").onclick = () => {
 
   var p2 = document.createElement("p");
   p2.innerHTML = "Contact Number :";
+  p2.classList.add("divp");
   var inputtext2 = document.createElement("input");
   inputtext2.setAttribute("type", "number");
   inputtext2.classList.add("fields");
@@ -37,6 +39,7 @@ document.getElementById("createnode").onclick = () => {
 
   var p3 = document.createElement("p");
   p3.innerHTML = "Entry Date :";
+  p3.classList.add("divp");
   var inputdate = document.createElement("input");
   inputdate.setAttribute("type", "date");
   inputdate.classList.add("fields");
@@ -45,6 +48,7 @@ document.getElementById("createnode").onclick = () => {
 
   var p4 = document.createElement("p");
   p4.innerHTML = "Days :";
+  p4.classList.add("divp");
   var showday = document.createElement("div");
   showday.classList.add("fields");
   div4.appendChild(p4);
