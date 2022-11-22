@@ -24,6 +24,7 @@ document.getElementById("createnode").onclick = () => {
   p1.classList.add("divp");
   var inputtext1 = document.createElement("input");
   inputtext1.setAttribute("type", "text");
+  inputtext1.setAttribute("name", "dogname");
   inputtext1.classList.add("fields");
   div1.appendChild(p1);
   div1.appendChild(inputtext1);
@@ -32,6 +33,7 @@ document.getElementById("createnode").onclick = () => {
   p2.innerHTML = "Contact Number :";
   p2.classList.add("divp");
   var inputtext2 = document.createElement("input");
+  inputtext2.setAttribute("name", "contact");
   inputtext2.setAttribute("type", "number");
   inputtext2.classList.add("fields");
   div2.appendChild(p2);
@@ -41,6 +43,7 @@ document.getElementById("createnode").onclick = () => {
   p3.innerHTML = "Entry Date :";
   p3.classList.add("divp");
   var inputdate = document.createElement("input");
+  inputdate.setAttribute("name", "entrydate");
   inputdate.setAttribute("type", "date");
   inputdate.classList.add("fields");
   div3.appendChild(p3);
@@ -50,7 +53,7 @@ document.getElementById("createnode").onclick = () => {
   p4.innerHTML = "Days :";
   p4.classList.add("divp");
   var showday = document.createElement("div");
-  showday.classList.add("fields");
+  showday.setAttribute("id", "showday");
   div4.appendChild(p4);
   div4.appendChild(showday);
 
@@ -60,3 +63,23 @@ document.getElementById("createnode").onclick = () => {
   newDiv.appendChild(div4);
   document.getElementById("listcontainer").appendChild(newDiv);
 };
+
+var entries = document.getElementsByClassName("entries");
+var fields = document.getElementsByClassName("fields");
+var submitbtn = document.getElementById("submitbtn");
+var jsondata = {};
+
+function createJson() {
+  console.log(entries.length);
+  for (i = 0; i < entries.length; i++) {
+    let temp = {};
+    for (j = 0; j < fields.length; j++) {
+      let key = fields[j].getAttribute("name");
+      temp[key] = fields[j].value;
+    }
+    jsondata[i] = temp;
+  }
+  console.log(jsondata);
+}
+
+submitbtn.onclick = createJson;
