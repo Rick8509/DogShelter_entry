@@ -9,10 +9,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-  var response = await req.body;
-  var data = await response;
-  module.exports = data;
-  console.log(data);
+  var jsondata = await req.body;
+  console.log(jsondata);
   res.send("Successfully uploaded");
 });
 
