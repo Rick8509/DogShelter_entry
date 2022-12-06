@@ -1,7 +1,5 @@
 {
-  "dependencies": {
-    "express": "^4.18.2"
-  },"scripts": {
-    "start": "nodemon express_js.js"
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
   }
 }
