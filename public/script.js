@@ -2,12 +2,14 @@
 document.body.onload = () => {
   setInterval(() => {
     let date = new Date();
-    document.getElementById("calender").innerHTML = `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`;
+    document.getElementById(
+      "calender"
+    ).innerHTML = `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`;
   }, 1000);
 };
 
 //dynamiclly create new elements
-document.getElementById("createnode").onclick = () => {
+document.getElementById("addnote").onclick = () => {
   var newDiv = document.createElement("div");
   newDiv.classList.add("entries");
 
@@ -63,41 +65,41 @@ document.getElementById("createnode").onclick = () => {
   newDiv.appendChild(div2);
   newDiv.appendChild(div3);
   newDiv.appendChild(div4);
-  document.getElementById("listcontainer").appendChild(newDiv);
+  document.getElementById("maincontent").appendChild(newDiv);
 };
 
-var entries = document.getElementsByClassName("entries");
-var fields = document.getElementsByClassName("fields");
-var savebtn = document.getElementById("savebtn");
-var submitbtn = document.getElementById("submitbtn");
-var jsonObj = {};
+// var entries = document.getElementsByClassName("entries");
+// var fields = document.getElementsByClassName("fields");
+// var savebtn = document.getElementById("savebtn");
+// var submitbtn = document.getElementById("submitbtn");
+// var jsonObj = {};
 
-//to create a json of all input data
-function createJson() {
-  console.log(entries.length);
-  for (i = 0; i < entries.length; i++) {
-    let temp = {};
-    for (j = 0; j < fields.length; j++) {
-      let key = fields[j].getAttribute("name");
-      temp[key] = fields[j].value;
-    }
-    jsonObj[i] = temp;
-  }
-  console.log(jsonObj);
-}
-savebtn.onclick = createJson;
+// //to create a json of all input data
+// function createJson() {
+//   console.log(entries.length);
+//   for (i = 0; i < entries.length; i++) {
+//     let temp = {};
+//     for (j = 0; j < fields.length; j++) {
+//       let key = fields[j].getAttribute("name");
+//       temp[key] = fields[j].value;
+//     }
+//     jsonObj[i] = temp;
+//   }
+//   console.log(jsonObj);
+// }
+// savebtn.onclick = createJson;
 
-//send data to server
-var sendResponse = async () => {
-  var response = await fetch("/", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-    body: JSON.stringify(jsonObj),
-  });
+// //send data to server
+// var sendResponse = async () => {
+//   var response = await fetch("/", {
+//     method: "POST",
+//     headers: {
+//       "Content-type": "application/json; charset=UTF-8",
+//     },
+//     body: JSON.stringify(jsonObj),
+//   });
 
-  var data = await response.text();
-  console.log(data);
-};
-submitbtn.onclick = sendResponse;
+//   var data = await response.text();
+//   console.log(data);
+// };
+// submitbtn.onclick = sendResponse;
