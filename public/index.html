@@ -13,6 +13,10 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href=".././css/output.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- header -->
@@ -30,13 +34,13 @@
           />
         </svg>
         <p
-          class="header-text flex items-center ml-[2vw] font-meduim font-[Roboto] text-[white] text-[5vw]"
+          class="header-text flex items-center ml-[2vw] font-meduim font-[Roboto] text-[white] text-[6vw]"
         >
           Pets care
         </p>
       </div>
       <div
-        class="calender relative ml-[auto] mr-[5vw] text-[white] text-[5vw] font-[Roboto]"
+        class="calender relative ml-[auto] mr-[5vw] text-[white] text-[6vw] font-[Roboto]"
         id="calender"
       ></div>
     </div>
@@ -46,40 +50,25 @@
       class="container relative flex justify-center items-center flex-wrap w-[90vw] top-[5vw] ml-[5vw] mr-[5vw]"
     >
       <div
-        class="w-[40vw] h-[14vw] rounded-xl bg-primary shadow-[0px_5px_30px_#FF5E0E] flex justify-center items-center flex-wrap"
+        class="w-[45vw] h-[15vw] rounded-xl bg-primary shadow-[0px_5px_30px_#FF5E0E] flex justify-center items-center flex-wrap"
         id="addnote"
       >
         <img src="./icons/writing.png" class="icon h-[5vw] w-[5vw]" />
         <p
-          class="text-[white] text-[5vw] ml-[1vw] pb-[1vw] font-[Roboto]"
+          class="text-[white] text-[6vw] ml-[1vw] pb-[1vw] font-[Roboto]"
         >
           register pet
         </p>
       </div>
       <div
-        class="maincontent relative w-[100%] top-[5vw]"
+        class="maincontent relative w-[100%] top-[10vw]"
         id="maincontent"
       >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-        dignissimos fugiat iure commodi quo ad est minus facilis.
-        Architecto temporibus fuga minus ipsa animi porro, explicabo
-        ipsam voluptates voluptate dolores. Laboriosam eius nihil
-        repellendus dolorem quae at possimus, eum suscipit delectus
-        unde aliquid vel corrupti dolor ullam esse consectetur illo.
-        Necessitatibus expedita ut modi exercitationem. Dolores
-        numquam officia reprehenderit facere? Totam ex saepe delectus
-        perspiciatis? Amet veritatis ipsam, itaque aspernatur harum
-        maiores culpa nemo distinctio quaerat necessitatibus tenetur
-        numquam, non nobis vel doloribus neque quibusdam voluptate
-        facilis, est sunt voluptas. Beatae, in adipisci nisi et cum
-        dolor tempore necessitatibus nostrum veritatis excepturi eum,
-        voluptas earum. Deleniti, quo odio, esse tempore saepe
-        consectetur aspernatur fuga impedit molestiae animi, ipsam
-        doloremque vero. Aliquid obcaecati iure ipsum assumenda
-        praesentium recusandae non debitis, similique tenetur totam ad
-        blanditiis aut! Laudantium possimus rem, molestiae pariatur
-        modi fugit maxime temporibus provident culpa? Non quia id
-        saepe.
+      <div class="entries">
+        <div class="formdivs"><p class="divp">Name :</p><input type="text" name="dogname" class="fields"></div>
+        <div class="formdivs"><p class="divp">Contact Number :</p><input name="contact" type="number" class="fields"></div>
+        <div class="formdivs"><p class="divp">Entry Date :</p><input name="entrydate" type="date" class="fields"></div>
+        <div class="formdivs"><p class="divp">Days :</p><div id="showday"></div></div></div>
       </div>
     </div>
 
@@ -87,3 +76,5 @@
   </body>
   <script src="script.js"></script>
 </html>
+
+

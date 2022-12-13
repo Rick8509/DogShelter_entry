@@ -561,6 +561,10 @@ video {
   top: 5vw;
 }
 
+.top-\[10vw\]{
+  top: 10vw;
+}
+
 .ml-\[2vw\]{
   margin-left: 2vw;
 }
@@ -601,6 +605,10 @@ video {
   height: 5vw;
 }
 
+.h-\[15vw\]{
+  height: 15vw;
+}
+
 .w-\[100vw\]{
   width: 100vw;
 }
@@ -619,6 +627,10 @@ video {
 
 .w-\[100\%\]{
   width: 100%;
+}
+
+.w-\[45vw\]{
+  width: 45vw;
 }
 
 .flex-wrap{
@@ -657,6 +669,10 @@ video {
 
 .text-\[5vw\]{
   font-size: 5vw;
+}
+
+.text-\[6vw\]{
+  font-size: 6vw;
 }
 
 .text-\[\#fef2f2\]{
