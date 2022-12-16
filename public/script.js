@@ -53,18 +53,18 @@ document.getElementById("addnote").onclick = () => {
   div3.appendChild(p3);
   div3.appendChild(inputdate);
 
-  var p4 = document.createElement("p");
-  p4.innerHTML = "Days :";
-  p4.classList.add("divp");
-  var showday = document.createElement("div");
-  showday.setAttribute("id", "showday");
-  div4.appendChild(p4);
-  div4.appendChild(showday);
+  // var p4 = document.createElement("p");
+  // p4.innerHTML = "Days :";
+  // p4.classList.add("divp");
+  // var showday = document.createElement("div");
+  // showday.setAttribute("id", "showday");
+  // div4.appendChild(p4);
+  // div4.appendChild(showday);
 
   newDiv.appendChild(div1);
   newDiv.appendChild(div2);
   newDiv.appendChild(div3);
-  newDiv.appendChild(div4);
+  // newDiv.appendChild(div4);
   document.getElementById("maincontent").appendChild(newDiv);
 };
 

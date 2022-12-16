@@ -12,11 +12,31 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 5vw;
+    margin-bottom: 2vw;
 }
 
 .divp,
 .fields{
     font-size:4vw;
+    font-weight:500;
     font-family: 'Roboto', sans-serif;
+    color: #FF5E0E;
+}
+
+.fields{
+    border: 1px solid #FF5E0E;
+    padding: 5px 5px 5px 5px;
+}
+
+#formdiv1{
+    margin-right: 22vw;
+}
+#formdiv2{
+    margin-right: 3.3vw;
+}
+#formdiv3{
+    margin-right: 14.1vw;
+}
+#formdiv4{
+    margin-right: 3vw;
 }
