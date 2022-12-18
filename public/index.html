@@ -25,7 +25,7 @@
     >
       <div class="headertext flex relative left-[5vw]">
         <svg
-          class="h-[10vw] text-[#fef2f2]"
+          class="h-[10vw]"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >
@@ -47,10 +47,10 @@
 
     <!-- content -->
     <div
-      class="container relative flex justify-center items-center flex-wrap w-[90vw] top-[5vw] ml-[5vw] mr-[5vw]"
+      class="container relative flex justify-center items-center flex-wrap w-[95vw] top-[5vw] ml-[3vw] mr-[3vw]"
     >
       <div
-        class="w-[60vw] h-[13vw] rounded-xl bg-primary shadow-[0px_5px_30px_#FF5E0E] flex justify-center items-center flex-wrap"
+        class="unselectable w-[60vw] h-[13vw] rounded-xl bg-primary shadow-[0px_5px_30px_#FF5E0E] flex justify-center items-center flex-wrap cursor-pointer"
         id="addnote"
       >
         <img src="./icons/writing.png" class="icon h-[5vw] w-[5vw]" />
@@ -61,18 +61,26 @@
         </p>
       </div>
       <div
-        class="maincontent relative w-[100%] top-[10vw]"
+        class="maincontent relative w-[100%] top-[7vw] h-[68vh] overflow-x-scroll"
         id="maincontent"
       >
-      <div class="entries">
-        <div class="formdivs"><p class="divp" id="formdiv1">Name :</p><input type="text" name="dogname" class="fields"></div>
-        <div class="formdivs"><p class="divp" id="formdiv2">Contact Number :</p><input name="contact" type="number" class="fields"></div>
-        <div class="formdivs"><p class="divp" id="formdiv3">Entry Date :</p><input name="entrydate" type="date" class="fields"></div>
-        <!-- <div class="formdivs"><p class="divp" id="formdiv4">Days :</p><div id="showday"></div></div></div> -->
+        <div class="entries">
+          <div class="formdivs"><p class="divp" id="divp1">Name :</p><input type="text" placeholder="enter pet name here" name="dogname" class="fields"></div>
+          <div class="formdivs"><p class="divp" id="divp2">Owner Name :</p><input type="text" placeholder="enter Owner name here" name="ownername" class="fields"></div>
+          <div class="formdivs"><p class="divp" id="divp3">Contact Number :</p><input name="contact" type="number" placeholder="enter contact num. here" class="fields"></div>
+          <div class="formdivs"><p class="divp" id="divp4">Entry Date :</p><input name="entrydate" type="date" class="fields"></div>
+          <!-- <div class="formdivs"><p class="divp" id="divp5">Days :</p><div id="showday"></div></div></div> -->
+        </div>
       </div>
+       
+      <div class="save relative flex justify-center top-[16vw] text-[#0000] text-primary">
+        <div class="savebtn unselectable text-white text-[6vw] bg-primary shadow-[0px_5px_30px_#FF5E0E] h-[11vw] w-[33vw] text-center rounded-xl">save</div>
+      </div>
+
     </div>
 
     <!--  -->
+
   </body>
   <script src="script.js"></script>
 </html>

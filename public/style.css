@@ -1,9 +1,26 @@
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .entries{
-   width: 100%; 
+   width: 97%; 
    position: relative;
    margin-bottom: 8vw;
-   padding: 15px 15px 15px 15px;
-   box-shadow: 0px 0px 10px #FF5E0E;
+   margin-left: 1vw;
+   padding: 3vw 3vw 3vw 3vw;
+   box-shadow: 0px 0px 15px #FF5E0E;
+   border-radius: 4vw;
+}
+.entries:first-child{
+    margin-top: 3vw;
+}
+.entries:last-child{
+    margin-bottom: 3vw;
 }
 
 .formdivs{
@@ -13,6 +30,9 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 2vw;
+}
+.formdivs:nth-child(4){
+    margin-bottom: 0vw;
 }
 
 .divp,
@@ -25,18 +45,18 @@
 
 .fields{
     border: 1px solid #FF5E0E;
-    padding: 5px 5px 5px 5px;
+    padding: 7px 7px 7px 7px;
 }
 
-#formdiv1{
+#divp1{
     margin-right: 22vw;
 }
-#formdiv2{
-    margin-right: 3.3vw;
+#divp2{
+    margin-right: 9.3vw;
 }
-#formdiv3{
-    margin-right: 14.1vw;
-}
-#formdiv4{
+#divp3{
     margin-right: 3vw;
+}
+#divp4{
+    margin-right: 14vw;
 }

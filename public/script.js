@@ -26,45 +26,63 @@ document.getElementById("addnote").onclick = () => {
   var p1 = document.createElement("p");
   p1.innerHTML = "Name :";
   p1.classList.add("divp");
+  p1.id = "divp1";
   var inputtext1 = document.createElement("input");
   inputtext1.setAttribute("type", "text");
   inputtext1.setAttribute("name", "dogname");
+  inputtext1.setAttribute("placeholder", "enter pet name here");
   inputtext1.classList.add("fields");
   div1.appendChild(p1);
   div1.appendChild(inputtext1);
 
   var p2 = document.createElement("p");
-  p2.innerHTML = "Contact Number :";
+  p2.innerHTML = "Owner Name :";
   p2.classList.add("divp");
+  p2.id = "divp2";
   var inputtext2 = document.createElement("input");
-  inputtext2.setAttribute("name", "contact");
-  inputtext2.setAttribute("type", "number");
+  inputtext2.setAttribute("type", "text");
+  inputtext2.setAttribute("name", "ownername");
+  inputtext2.setAttribute("placeholder", "enter Owner name here");
   inputtext2.classList.add("fields");
   div2.appendChild(p2);
   div2.appendChild(inputtext2);
 
   var p3 = document.createElement("p");
-  p3.innerHTML = "Entry Date :";
+  p3.innerHTML = "Contact Number :";
   p3.classList.add("divp");
+  p3.id = "divp3";
+  var inputtext3 = document.createElement("input");
+  inputtext3.setAttribute("name", "contact");
+  inputtext3.setAttribute("type", "number");
+  inputtext3.setAttribute("placeholder", "enter contact num. here");
+  inputtext3.classList.add("fields");
+  div3.appendChild(p3);
+  div3.appendChild(inputtext3);
+
+  var p4 = document.createElement("p");
+  p4.innerHTML = "Entry Date :";
+  p4.classList.add("divp");
+  p4.id = "divp4";
   var inputdate = document.createElement("input");
   inputdate.setAttribute("name", "entrydate");
   inputdate.setAttribute("type", "date");
   inputdate.classList.add("fields");
-  div3.appendChild(p3);
-  div3.appendChild(inputdate);
+  div4.appendChild(p4);
+  div4.appendChild(inputdate);
 
-  // var p4 = document.createElement("p");
-  // p4.innerHTML = "Days :";
-  // p4.classList.add("divp");
+  // var p5 = document.createElement("p");
+  // p5.innerHTML = "Days :";
+  // p5.classList.add("divp");
   // var showday = document.createElement("div");
   // showday.setAttribute("id", "showday");
-  // div4.appendChild(p4);
-  // div4.appendChild(showday);
+  // div5.appendChild(p5);
+  // div5.appendChild(showday);
 
   newDiv.appendChild(div1);
   newDiv.appendChild(div2);
   newDiv.appendChild(div3);
-  // newDiv.appendChild(div4);
+  newDiv.appendChild(div4);
+  // newDiv.appendChild(div5);
   document.getElementById("maincontent").appendChild(newDiv);
 };
 
