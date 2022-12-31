@@ -91,10 +91,10 @@ document.getElementById("addnote").onclick = () => {
 //
 
 //to create a json of all input data
+var jsonObj = {};
 function createJson() {
   var entries = document.getElementsByClassName("entries");
   var savebtn = document.getElementById("savebtn");
-  var jsonObj = {};
 
   for (i = 0; i < entries.length; i++) {
     let temp = {};
@@ -110,7 +110,7 @@ function createJson() {
 savebtn.onclick = createJson;
 
 //
- 
+
 // send data to server
 // var submitbtn = document.getElementById("submitbtn");
 var sendResponse = async () => {
