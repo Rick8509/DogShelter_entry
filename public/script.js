@@ -112,7 +112,7 @@ savebtn.onclick = createJson;
 //
  
 // send data to server
-var submitbtn = document.getElementById("submitbtn");
+// var submitbtn = document.getElementById("submitbtn");
 var sendResponse = async () => {
   var response = await fetch("/", {
     method: "POST",
@@ -125,4 +125,5 @@ var sendResponse = async () => {
   var data = await response.text();
   console.log(data);
 };
-submitbtn.onclick = sendResponse;
+// submitbtn.onclick = sendResponse;
+savebtn.onclick = sendResponse;
