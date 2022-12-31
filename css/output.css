@@ -569,10 +569,6 @@ video {
   top: 16vw;
 }
 
-.top-\[14vw\]{
-  top: 14vw;
-}
-
 .ml-\[2vw\]{
   margin-left: 2vw;
 }
@@ -701,10 +697,6 @@ video {
 
 .text-\[5\.3vw\]{
   font-size: 5.3vw;
-}
-
-.text-\[6\.5vw\]{
-  font-size: 6.5vw;
 }
 
 .text-\[white\]{

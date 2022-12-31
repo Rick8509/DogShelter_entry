@@ -86,26 +86,27 @@ document.getElementById("addnote").onclick = () => {
   document.getElementById("maincontent").appendChild(newDiv);
 };
 
-// var entries = document.getElementsByClassName("entries");
-// var fields = document.getElementsByClassName("fields");
-// var savebtn = document.getElementById("savebtn");
+var entries = document.getElementsByClassName("entries");
+var fields = document.getElementsByClassName("fields");
+var savebtn = document.getElementById("savebtn");
 // var submitbtn = document.getElementById("submitbtn");
-// var jsonObj = {};
+var jsonObj = {};
 
-// //to create a json of all input data
-// function createJson() {
-//   console.log(entries.length);
-//   for (i = 0; i < entries.length; i++) {
-//     let temp = {};
-//     for (j = 0; j < fields.length; j++) {
-//       let key = fields[j].getAttribute("name");
-//       temp[key] = fields[j].value;
-//     }
-//     jsonObj[i] = temp;
-//   }
-//   console.log(jsonObj);
-// }
-// savebtn.onclick = createJson;
+//to create a json of all input data
+function createJson() {
+  console.log(entries.length);
+  for (i = 0; i < entries.length; i++) {
+    let temp = {};
+    for (j = 0; j < fields.length; j++) {
+      let key = fields[j].getAttribute("name");
+      temp[key] = fields[j].value;
+    }
+    jsonObj["entries"+i] = temp;
+    temp = null;
+  }
+  console.log(jsonObj);
+}
+savebtn.onclick = createJson;
 
 // //send data to server
 // var sendResponse = async () => {
